@@ -8,11 +8,12 @@
 # Writes a file with the results in ./results/test1/...
 
 # Imports
+import sys
 import os
 import numpy as np
 
 # Get data args from bash
-amp = 0.1
+amp = sys.argv[0]
 
 # Creates output folder
 if not os.path.exists("results"):
@@ -27,7 +28,7 @@ while ftrain <= 1:
   amp_s = "amp_" + str(amp) + "_"
   ftrain_s = "ftrain_" + str(ftrain)
   # Creates file with garbage
-  np.savetxt("results/test1/" + amp_s + ftrain_s + ".txt", [amp,ftrain])
+  np.savetxt("results/test1/" + amp_s + ftrain_s + ".txt", [0, 1])
   # Increments
   ftrain += 0.01
   ftrain = round(ftrain,2)
