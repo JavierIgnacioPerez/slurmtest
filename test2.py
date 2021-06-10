@@ -13,7 +13,7 @@ import os
 import numpy as np
 
 # Get data args from bash
-amp = sys.argv[0]
+amp = sys.argv[1]
 
 # Creates output folder
 if not os.path.exists("results"):
@@ -27,7 +27,7 @@ dist= 100
 while ftrain <= 1:
   while dist <= 1000:
     # Creates aux strings.
-    amp_s = "amp_" + str(amp) + "_"
+    amp_s = "amp_" + amp + "_"
     ftrain_s = "ftrain_" + str(ftrain) + "_"
     dist_s = "dist_" + str(dist)
     # Creates file with garbage

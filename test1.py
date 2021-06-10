@@ -13,7 +13,7 @@ import os
 import numpy as np
 
 # Get data args from bash
-amp = sys.argv[0]
+amp = sys.argv[1]
 
 # Creates output folder
 if not os.path.exists("results"):
@@ -25,7 +25,8 @@ if not os.path.exists("results/test1"):
 ftrain = 0.05
 while ftrain <= 1:
   # Creates aux strings.
-  amp_s = "amp_" + str(amp) + "_"
+  amp_s = "amp_" + amp + "_"
+  print(amp)
   ftrain_s = "ftrain_" + str(ftrain)
   # Creates file with garbage
   np.savetxt("results/test1/" + amp_s + ftrain_s + ".txt", [0, 1])
